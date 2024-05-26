@@ -54,6 +54,20 @@ int main() {
         case 4:
             printMatrix(mat, MAX_ROW);
             break;
+
+        case 5:
+            if (!makeIdentityMatrix(mat, MAX_ROW))
+                cerr << "\nNot a square matrix, cannot apply function";
+            break;
+        case 6:
+            if (isIdentityMatrix(mat, MAX_ROW))
+                cout << "\nMatrix is an identity matrix";
+            else
+                cout << "\nMatrix is NOT an identity matrix";
+            break;
+        case 7:
+            cout << "\nSum of diagonal is: " << sumOfDiagonal(mat, MAX_ROW);
+            break;
         case 0:
             break;
         default:
@@ -73,6 +87,9 @@ void showMenu() {
     cout << "\n2) Sum of a specific row";
     cout << "\n3) Sum of a specific column";
     cout << "\n4) Show matrix";
+    cout << "\n5) Make Identity Matrix";
+    cout << "\n6) Test if Identity Matrix";
+    cout << "\n7) Sum of Diagonal";
     cout << "\n0) Exit";
     cout << "\nEnter choice: ";
 }

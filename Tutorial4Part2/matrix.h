@@ -20,4 +20,7 @@ double sumOfCol(const double mat[][MAX_COL], const int column, const int maxCol)
 void fillWithRandomNum(double mat[][MAX_COL], const int maxRow);
 void printMatrix(const double mat[][MAX_COL], const int maxRow);
 
+bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow);
+bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow);
+double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow);
 #endif 
