@@ -98,7 +98,7 @@ bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow) {
         for (int j = 0; j < maxRow; ++j) {
             if (i == j && mat[i][j] != 1)
                 return false;
-            else if (i != j || mat[i][j] != 0)
+            else if (i != j && mat[i][j] != 0)
                 return false;
         }
     }
@@ -118,7 +118,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
         return false; // Identity matrix must be a square matrix
 
     for (int i = 0; i < maxRow; ++i) {
-        for (int j = 0; i < maxRow; ++j) {
+        for (int j = 0; j < maxRow; ++j) {
             if (i == j)
                 mat[i][j] = 1;
             else
@@ -136,7 +136,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
  * @return Returns sum of diagonal, <code>0</code> if this is not a square matrix.
  */
 double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
-    double sum = 1;
+    double sum = 0;
 
     if (MAX_COL != maxRow)
         return 0; // Identity matrix must be a square matrix
