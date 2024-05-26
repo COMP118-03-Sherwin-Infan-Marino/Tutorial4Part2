@@ -1,4 +1,4 @@
-/** \file Tutorial4Part2.cpp
+/** \file matrix.h
  *  \brief     Does various actions on an matrix.
  *  \details    Implements the function prototypes to calculate the sum of a specific row or column, fills with random values and also rpints matrix.
  *  \author    Sherwin Infan Marino.

@@ -1,4 +1,4 @@
-/** \file Tutorial4Part2.cpp
+/** \file Main.cpp
  *  \brief     Does various actions on an matrix.
  *  \details   Implements the menu to calculate the sum of a specific row or column, fills with random values and also rpints matrix.
  *  \author    Sherwin Infan Marino.
