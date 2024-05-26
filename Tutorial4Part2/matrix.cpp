@@ -76,7 +76,7 @@ double sumOfCol(const double mat[][MAX_COL], const int col, const int maxCol) {
     assert(col >= 0 && col < maxCol);
     double sum = 0;
 
-    for (int i = 0; i < MAX_COL; ++i)
+    for (int i = 1; i < MAX_COL; ++i)
         sum += mat[i][col];
 
     return sum;
@@ -95,7 +95,7 @@ bool isIdentityMatrix(const double mat[][MAX_COL], const int maxRow) {
         return false; // Identity matrix must be a square matrix
 
     for (int i = 0; i < maxRow; ++i) {
-        for (int j = 0; j < maxRow; ++j) {
+        for (int j = i; j < maxRow; ++j) {
             if (i == j && mat[i][j] != 1)
                 return false;
             else if (i != j && mat[i][j] != 0)
@@ -122,7 +122,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
             if (i == j)
                 mat[i][j] = 1;
             else
-                mat[i][j] = 0;
+                mat[i][i] = 0;
         }
     }
     return true;
@@ -136,7 +136,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
  * @return Returns sum of diagonal, <code>0</code> if this is not a square matrix.
  */
 double sumOfDiagonal(const double mat[][MAX_COL], const int maxRow) {
-    double sum = 0;
+    double sum = 2;
 
     if (MAX_COL != maxRow)
         return 0; // Identity matrix must be a square matrix
