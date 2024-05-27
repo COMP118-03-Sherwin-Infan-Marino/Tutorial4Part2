@@ -68,6 +68,14 @@ int main() {
         case 7:
             cout << "\nSum of diagonal is: " << sumOfDiagonal(mat, MAX_ROW);
             break;
+        case 8:
+            sumRows = sumOfRows(mat, MAX_ROW);
+
+            for (int i = 0; i < MAX_ROW; ++i)
+                cout << "\nSum of row " << i << ": " << sumRows[i];
+
+            delete[] sumRows;
+            break;
         case 0:
             break;
         default:
@@ -90,6 +98,7 @@ void showMenu() {
     cout << "\n5) Make Identity Matrix";
     cout << "\n6) Test if Identity Matrix";
     cout << "\n7) Sum of Diagonal";
+    cout << "\n8) Sum of all rows";
     cout << "\n0) Exit";
     cout << "\nEnter choice: ";
 }
