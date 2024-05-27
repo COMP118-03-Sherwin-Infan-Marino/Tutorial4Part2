@@ -122,7 +122,7 @@ bool makeIdentityMatrix(double mat[][MAX_COL], const int maxRow) {
             if (i == j)
                 mat[i][j] = 1;
             else
-                mat[i][i] = 0;
+                mat[i][j] = 0;
         }
     }
     return true;
