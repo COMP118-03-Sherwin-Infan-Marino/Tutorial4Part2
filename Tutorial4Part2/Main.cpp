@@ -27,6 +27,7 @@ int main() {
     // Defining the matrix
     double mat[MAX_ROW][MAX_COL];
     double* sumRows;
+    double* sumCols;
 
     do {
         showMenu();
@@ -73,8 +74,16 @@ int main() {
 
             for (int i = 0; i < MAX_ROW; ++i)
                 cout << "\nSum of row " << i << ": " << sumRows[i];
-
+                cout << endl;
             delete[] sumRows;
+            break;
+        case 9:
+            sumCols = sumOfCols(mat, MAX_COL);
+
+            for (int i = 0; i < MAX_COL; ++i)
+                cout << "\nSum of Columns " << i << ": " << sumCols[i];
+                cout << endl;
+            delete[] sumCols;
             break;
         case 0:
             break;
@@ -99,6 +108,7 @@ void showMenu() {
     cout << "\n6) Test if Identity Matrix";
     cout << "\n7) Sum of Diagonal";
     cout << "\n8) Sum of all rows";
+    cout << "\n9) Sum of all columns";
     cout << "\n0) Exit";
     cout << "\nEnter choice: ";
 }

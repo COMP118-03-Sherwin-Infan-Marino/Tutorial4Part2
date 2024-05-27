@@ -169,3 +169,25 @@ double* sumOfRows(const double mat[][MAX_COL], const int maxRow) {
 
     return retValues;
 }
+
+/**
+ * The <code>sumOfCols</code> function sums up the values of all the columns and
+ * return this as a single dimention array.
+ * NOTE: return value is dynamically allocated caller must delete it.
+ * <BR>
+ * @param mat The matrix.
+ * @param maxCol How many columns the matrix have.
+ * @return Returns a single dimention array of size <code>maxCol</code>,
+ * which MUST be deleted by the caller.
+ */
+double* sumOfCols(const double mat[][MAX_COL], const int maxCol) {
+
+    double* retValues = new double[maxCol] {0};
+
+    for (int i = 0; i < maxCol; ++i) {
+        for (int j = 0; j < MAX_ROW; ++j)
+            retValues[i] += mat[j][i];
+    }
+
+    return retValues;
+}
