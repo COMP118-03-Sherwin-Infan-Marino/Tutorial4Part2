@@ -76,7 +76,7 @@ double sumOfCol(const double mat[][MAX_COL], const int col, const int maxCol) {
     assert(col >= 0 && col < maxCol);
     double sum = 0;
 
-    for (int i = 1; i < MAX_COL; ++i)
+    for (int i = 0; i < MAX_COL; ++i)
         sum += mat[i][col];
 
     return sum;
